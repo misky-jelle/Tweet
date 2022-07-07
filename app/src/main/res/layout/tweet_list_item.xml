@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTweet"
+        android:layout_width="360dp"
+        android:layout_height="245dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgTweet"
+                android:layout_width="68dp"
+                android:layout_height="79dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_person_24" />
+
+            <ImageView
+                android:id="@+id/imRetweet"
+                android:layout_width="52dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginBottom="554dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgTweet"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_retweet" />
+
+            <TextView
+                android:id="@+id/tvReweets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="56dp"
+                android:text="14"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imRetweet"
+                app:layout_constraintTop_toBottomOf="@+id/imgTweet" />
+
+            <ImageView
+                android:id="@+id/imgComment"
+                android:layout_width="39dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/tvReweets"
+                app:srcCompat="@drawable/ic_comment"
+                tools:layout_editor_absoluteY="129dp" />
+
+            <TextView
+                android:id="@+id/tvComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="24"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imgComment"
+                tools:layout_editor_absoluteY="137dp" />
+
+            <ImageView
+                android:id="@+id/imgLikes"
+                android:layout_width="50dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvComments"
+                app:layout_constraintTop_toTopOf="@+id/tvComments"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_heart" />
+
+            <TextView
+                android:id="@+id/tvLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="120"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imgLikes"
+                tools:layout_editor_absoluteY="129dp" />
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="34dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toEndOf="@+id/tvLikes"
+                app:srcCompat="@drawable/ic_save"
+                tools:layout_editor_absoluteY="132dp" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="209dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="19dp"
+                android:text="Maina Nduruma"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgTweet"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="24dp"
+                android:text="Hello world:)"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toEndOf="@+id/imgTweet"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
